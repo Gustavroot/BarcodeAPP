@@ -15,6 +15,7 @@
 	</author>
 		
         <preference name="phonegap-version" value="2.9.0" />
+        <plugin name="Camera" value="org.apache.cordova.CameraLauncher" />
         <gap:plugin name="com.phonegap.plugins.barcodescanner" />
     	<icon src="./resources/scanner-barcode.png" width="36" height="36" />
     	<access origin="*" />

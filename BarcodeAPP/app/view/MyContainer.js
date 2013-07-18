@@ -35,7 +35,8 @@ Ext.define('MyApp.view.MyContainer', {
                         }, function(error) {
                             alert("Scanning failed: " + error);
                         }
-                    );}
+                        );
+                    }
                     catch(e){
                         alert('Scanning object not callable');
                     }
