@@ -1,0 +1,39 @@
+{
+    "name": "BarcodeAPP",
+    "settings": {},
+    "xdsVersion": "2.2.2",
+    "xdsBuild": 991,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000503,
+    "framework": "touch22",
+    "topInstanceFileMap": {
+        "8c0c3378-ee0d-42be-8ada-f9b01987fe16": {
+            "paths": [
+                "metadata/view/MyContainer",
+                "app/view/override/MyContainer.js",
+                "app/view/MyContainer.js"
+            ],
+            "className": "MyContainer"
+        },
+        "a23eedd2-d4f5-47f9-bbba-f7f55619b3dd": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "8c0c3378-ee0d-42be-8ada-f9b01987fe16"
+        ],
+        "store": [],
+        "controller": [],
+        "model": [],
+        "resource": [
+            "a23eedd2-d4f5-47f9-bbba-f7f55619b3dd"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

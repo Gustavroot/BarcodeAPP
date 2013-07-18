@@ -1,0 +1,29 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MyContainer",
+        "designer|initialView": true,
+        "layout": "fit"
+    },
+    "designerId": "8c0c3378-ee0d-42be-8ada-f9b01987fe16",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "title": "Barcode APP"
+            },
+            "designerId": "3a1f1089-1e81-4eef-aaee-28bd00cba2eb"
+        }
+    ]
+}
