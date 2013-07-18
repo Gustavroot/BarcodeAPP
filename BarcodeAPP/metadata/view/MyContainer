@@ -64,7 +64,14 @@
                             "catch(e){",
                             "    alert('Scanning object not callable');",
                             "    alert('Error'+e);",
-                            "    navigator.camera.getPicture( cameraSuccess, cameraError, [ cameraOptions ] );",
+                            "    try{",
+                            "        navigator.camera.getPicture( cameraSuccess, cameraError, [ cameraOptions ] );",
+                            "    }",
+                            "    catch(e){",
+                            "        alert('getting picture failed as well...');",
+                            "    }",
+                            "    alert('something failed, but do not know what...');",
+                            "    ",
                             "}"
                         ]
                     },
