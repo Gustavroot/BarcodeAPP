@@ -30,6 +30,8 @@ Ext.define('MyApp.view.MyContainer', {
                 xtype: 'button',
                 handler: function(button, event) {
                     try{
+                        alert('Trying...');
+                        window.plugins.barcodeScanner.scan();
                         window.plugins.barcodeScanner.scan(function(result){
                             alert("We got a barcode\n"+"Result: "+result.text+"\n"+"Format: "+result.format+"\n"+"Cancelled: "+result.cancelled);
                         }, function(error) {
