@@ -25,6 +25,18 @@ Ext.define('MyApp.view.MyContainer', {
                 xtype: 'toolbar',
                 docked: 'top',
                 title: 'Barcode APP'
+            },
+            {
+                xtype: 'button',
+                handler: function(button, event) {
+                    window.plugins.barcodeScanner.scan(function(result){
+                        alert("We got a barcode\n"+"Result: "+result.text+"\n"+"Format: "+result.format+"\n"+"Cancelled: "+result.cancelled);
+                    }, function(error) {
+                        alert("Scanning failed: " + error);
+                    }
+                    );
+                },
+                text: 'Scan'
             }
         ]
     }

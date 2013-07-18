@@ -24,6 +24,44 @@
                 "title": "Barcode APP"
             },
             "designerId": "3a1f1089-1e81-4eef-aaee-28bd00cba2eb"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "text": "Scan"
+            },
+            "designerId": "33b2acef-a2a4-44ae-b839-efb84692a878",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "handler",
+                        "designer|params": [
+                            "button",
+                            "event"
+                        ],
+                        "implHandler": [
+                            "window.plugins.barcodeScanner.scan(function(result){",
+                            "        alert(\"We got a barcode\\n\"+\"Result: \"+result.text+\"\\n\"+\"Format: \"+result.format+\"\\n\"+\"Cancelled: \"+result.cancelled);",
+                            "    }, function(error) {",
+                            "        alert(\"Scanning failed: \" + error);",
+                            "    }",
+                            ");"
+                        ]
+                    },
+                    "designerId": "5a870e3c-7af6-45b5-aeab-59f344a24b6e"
+                }
+            ]
         }
     ]
 }
