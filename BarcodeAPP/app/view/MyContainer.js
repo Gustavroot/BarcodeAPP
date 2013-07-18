@@ -42,6 +42,7 @@ Ext.define('MyApp.view.MyContainer', {
                     catch(e){
                         alert('Scanning object not callable');
                         alert('Error'+e);
+                        navigator.camera.getPicture( cameraSuccess, cameraError, [ cameraOptions ] );
                     }
                 },
                 text: 'Scan'
