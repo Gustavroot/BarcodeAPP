@@ -63,6 +63,7 @@
                             "}",
                             "catch(e){",
                             "    alert('Scanning object not callable');",
+                            "    alert('Error'+e);",
                             "}"
                         ]
                     },
