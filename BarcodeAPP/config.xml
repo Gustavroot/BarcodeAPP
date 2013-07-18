@@ -10,7 +10,7 @@
         Scanner
 	</description>
 
-        <plugin name="Camera" value="org.apache.cordova.CameraLauncher" />
+        <plugin name="com.phonegap.plugins.camera" value="org.apache.cordova.CameraLauncher" />
 
 	<author href="http://www.didi.cr" email="info@didi.cr">
             TECMO S.A.

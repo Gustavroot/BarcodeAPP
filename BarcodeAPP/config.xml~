@@ -10,12 +10,13 @@
         Scanner
 	</description>
 
+        <plugin name="Camera" value="org.apache.cordova.CameraLauncher" />
+
 	<author href="http://www.didi.cr" email="info@didi.cr">
             TECMO S.A.
 	</author>
 		
         <gap:plugin name="com.phonegap.plugins.barcodescanner" />
-        <gap:plugin name="Camera" value="org.apache.cordova.CameraLauncher" />
 
         <feature name="http://api.phonegap.com/1.0/device" />
 
