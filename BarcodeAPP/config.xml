@@ -10,14 +10,11 @@
         Scanner
 	</description>
 
-        <plugin name="com.phonegap.plugins.camera" value="org.apache.cordova.CameraLauncher" />
-
 	<author href="http://www.didi.cr" email="info@didi.cr">
             TECMO S.A.
 	</author>
 		
-        <gap:plugin name="com.phonegap.plugins.barcodescanner" />
-
+        <feature name="http://api.phonegap.com/1.0/media"/>
         <feature name="http://api.phonegap.com/1.0/device" />
 
         <preference name="phonegap-version" value="2.5.0" />
@@ -28,5 +25,6 @@
 
     	<icon src="./resources/scanner-barcode.png" width="36" height="36" />
 
+        <gap:plugin name="com.phonegap.plugins.barcodescanner" />
 
 </widget>
