@@ -17,7 +17,7 @@
         <feature name="http://api.phonegap.com/1.0/camera"/>
         <feature name="http://api.phonegap.com/1.0/device" />
 
-        <preference name="phonegap-version" value="2.5.0" />
+        <preference name="phonegap-version" value="2.9.0" />
         <preference name="orientation"      value="default" />
         <preference name="target-device"    value="universal" />
         <preference name="fullscreen"       value="false" />
@@ -25,6 +25,5 @@
 
     	<icon src="./resources/scanner-barcode.png" width="36" height="36" />
 
-        <gap:plugin name="com.phonegap.plugins.barcodescanner" />
 
 </widget>
