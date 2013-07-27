@@ -46,7 +46,7 @@ Ext.define('MyApp.view.MyContainer', {
                             );
                         }
                         catch(e){
-
+                            alert('failed second scanning try');
                         }
                     }
                     catch(e){
