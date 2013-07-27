@@ -31,13 +31,23 @@ Ext.define('MyApp.view.MyContainer', {
                 handler: function(button, event) {
                     try{
                         alert('Trying...');
-                        window.plugins.barcodeScanner.scan();
-                        window.plugins.barcodeScanner.scan(function(result){
-                            alert("We got a barcode\n"+"Result: "+result.text+"\n"+"Format: "+result.format+"\n"+"Cancelled: "+result.cancelled);
-                        }, function(error) {
-                            alert("Scanning failed: " + error);
+                        try{
+                            window.plugins.barcodeScanner.scan();
                         }
-                        );
+                        catch(e){
+                            alert('failed first scanning try');
+                        }
+                        try{
+                            window.plugins.barcodeScanner.scan(function(result){
+                                alert("We got a barcode\n"+"Result: "+result.text+"\n"+"Format: "+result.format+"\n"+"Cancelled: "+result.cancelled);
+                            }, function(error) {
+                                alert("Scanning failed: " + error);
+                            }
+                            );
+                        }
+                        catch(e){
+
+                        }
                     }
                     catch(e){
                         alert('Scanning object not callable');
