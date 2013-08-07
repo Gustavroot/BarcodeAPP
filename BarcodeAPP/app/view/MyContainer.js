@@ -30,43 +30,19 @@ Ext.define('MyApp.view.MyContainer', {
                 xtype: 'button',
                 handler: function(button, event) {
                     try{
-                        alert('Trying...');
-                        try{
-                            window.plugins.barcodeScanner.scan();
+                        navigator.camera.getPicture(onSuccess, onFail, { quality: 50, destinationType: Camera.DestinationType.DATA_URL});
+                        function onSuccess(imageData) {
+                            var image = document.getElementById('myImage');
+                            image.src = "data:image/jpeg;base64," + imageData;
                         }
-                        catch(e){
-                            alert('failed first scanning try');
-                        }
-                        try{
-                            window.plugins.barcodeScanner.scan(function(result){
-                                alert("We got a barcode\n"+"Result: "+result.text+"\n"+"Format: "+result.format+"\n"+"Cancelled: "+result.cancelled);
-                            }, function(error) {
-                                alert("Scanning failed: " + error);
-                            }
-                            );
-                        }
-                        catch(e){
-                            alert('failed second scanning try');
+                        function onFail(message) {
+                            alert('Failed because: ' + message);
                         }
                     }
                     catch(e){
-                        alert('Scanning object not callable');
-                        alert('Error'+e);
-                        try{
-                            navigator.camera.getPicture(onSuccess, onFail, { quality: 50, destinationType: Camera.DestinationType.DATA_URL});
-                            function onSuccess(imageData) {
-                                var image = document.getElementById('myImage');
-                                image.src = "data:image/jpeg;base64," + imageData;
-                            }
-                            function onFail(message) {
-                                alert('Failed because: ' + message);
-                            }
-                        }
-                        catch(e){
-                            alert('getting picture failed as well...');
-                        }
-                        alert('something failed, but do not know what...');
+                        alert('getting picture failed as well...');
                     }
+
                 },
                 text: 'Scan'
             }
